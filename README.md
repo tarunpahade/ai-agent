@@ -16,13 +16,6 @@ An autonomous AI agent designed to facilitate product development communication 
 - **Sprint Planning**: Automated sprint suggestions
 - **Documentation Generation**: Auto-creates technical docs
 
-## Integration
-Github, git , inbuilt analytics 
-Slack , Discord , Whatsapp 
-
-
-AI HR , AI Designer and AI Engenieer 
-Concept pay based 
 
 ## 🛠 Technical Stack
 
