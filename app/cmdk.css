@@ -25,3 +25,10 @@
 [cmdk-separator] {
   @apply border-b border-gray-300 w-full my-0.5;
 }
+.lexical-bold {
+  font-weight: bold;
+}
+
+.lexical-italic {
+  font-style: italic;
+}

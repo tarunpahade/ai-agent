@@ -30,12 +30,32 @@ function Chat() {
     useChat({
       keepLastMessageOnError: true,
     });
+async function handleSubmit2(e: any){
+  e.preventDefault()
+  try {
+   // axios post request to the backend
+   const url = 'https://xfsned.buildship.run/getDoc/';
+   const response = await fetch(url, {
+     method: 'POST',
+     headers: {
+       'Content-Type': 'application/json',
+     },
+     body: JSON.stringify({ messages })
+   });
 
+   if (!response.ok) {
+     throw new Error(`HTTP error! status: ${response.status}`);
+   }
+
+  } catch (error) {
+    console.log(error)
+  }
+} 
   return (
     <div className="relative w-full mx-auto h-full flex flex-col">
       <div className="flex-1 overflow-y-auto">
         <div className="max-w-[740px] mx-auto flex-1 px-8 py-4 flex flex-col gap-2">
-          {messages.map((message) => (
+          {messages.map((message:any) => (
             <MessageLine key={message.id} message={message} />
           ))}
         </div>
@@ -77,8 +97,6 @@ function Chat() {
           </button>
         </div>
       </form>
-
-      <LiveblocksBadge />
     </div>
   );
 }
@@ -160,28 +178,5 @@ function MessageLine({ message }: { message: Message }) {
         </div>
       )}
     </div>
-  );
-}
-
-function LiveblocksBadge() {
-  return (
-    <a
-      className="fixed top-4 right-4"
-      href="https://liveblocks.io"
-      rel="noreferrer"
-      target="_blank"
-    >
-      <picture>
-        <source
-          srcSet="https://liveblocks.io/badge-dark.svg"
-          media="(prefers-color-scheme: dark)"
-        />
-        <img
-          src="https://liveblocks.io/badge-light.svg"
-          alt="Made with Liveblocks"
-          className=""
-        />
-      </picture>
-    </a>
   );
 }

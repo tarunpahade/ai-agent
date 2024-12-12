@@ -7,6 +7,7 @@ import { ReactNode } from "react";
 import { getPageUrl } from "../config";
 import { PageLinks } from "./PageLinks";
 import { CreateWithAiLink } from "./CreateWithAiLink";
+import { Ellipsis } from "lucide-react";
 
 export default async function DefaultLayout({
   children,
@@ -22,11 +23,13 @@ export default async function DefaultLayout({
 
   return (
     <div className="flex h-full max-h-full">
-      <div className="w-[240px] h-full bg-gray-50 border-r border-gray-100 flex-shrink-0 flex flex-col">
+      {/* <div className="w-[240px] h-full bg-gray-50 border-r border-gray-100 flex-shrink-0 flex flex-col">
         <div className="flex items-center justify-between p-3">
           <div className="w-28 text-black">
             <Logo />
+          
           </div>
+          <Ellipsis className="w-4 h-4 text-gray-500" />
           <form action={create} className="flex items-center">
             <button>
               <span className="sr-only">Create new page</span>
@@ -43,9 +46,11 @@ export default async function DefaultLayout({
         <div className="text-xs font-medium text-gray-500 mt-6 pl-2">Pages</div>
 
         <PageLinks />
-      </div>
+      </div> */}
 
-      <div className="relative flex flex-col h-full w-full">{children}</div>
+      <div className="relative flex flex-col h-full w-full">
+        {children}
+        </div>
     </div>
   );
 }
