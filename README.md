@@ -1,3 +1,20 @@
+diAlect.ai
+your personal AI coach
+your diet AI coach 
+your AI math tutor 
+
+agents
+
+home security agent monitor home security
+personal agent meet and calander 
+
+
+
+
+
+
+
+
 # AI Product Manager Agent
 
 An autonomous AI agent designed to facilitate product development communication and documentation generation using Next.js, Lexical Editor, and AI integration.
